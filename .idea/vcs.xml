@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Bai2_Typescript/thuc_hanh/typescript-demo" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Bai2_Typescript/typescript-demo" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Bai3_Angular_Overview/bai_tap/angular-training" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/my-project-demo" vcs="Git" />
+  </component>
+</project>
