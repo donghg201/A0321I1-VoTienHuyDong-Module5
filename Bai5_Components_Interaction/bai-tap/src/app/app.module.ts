@@ -10,6 +10,8 @@ import {CountdownTimerEventComponent} from './countdown-timer-event/countdown-ti
 import {CountdownTimerEventAliasComponent} from './countdown-timer-event-alias/countdown-timer-event-alias.component';
 import {CountdownGetSetComponent} from './countdown-get-set/countdown-get-set.component';
 import {CountdownTimerOnchangesComponent} from './countdown-timer-onchanges/countdown-timer-onchanges.component';
+import { HackerenwAddComponent } from './hackernews/hackerenw-add/hackerenw-add.component';
+import { HackernewDetailComponent } from './hackernews/hackernew-detail/hackernew-detail.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import {CountdownTimerOnchangesComponent} from './countdown-timer-onchanges/coun
     CountdownTimerEventComponent,
     CountdownTimerEventAliasComponent,
     CountdownGetSetComponent,
-    CountdownTimerOnchangesComponent
+    CountdownTimerOnchangesComponent,
+    HackerenwAddComponent,
+    HackernewDetailComponent
   ],
   imports: [
     BrowserModule
