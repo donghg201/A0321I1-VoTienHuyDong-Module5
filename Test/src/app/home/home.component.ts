@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {CommonService} from "../Services/common.service";
 
 @Component({
   selector: 'app-home',
@@ -8,7 +9,7 @@ import {Component, OnInit} from '@angular/core';
 export class HomeComponent implements OnInit {
 
   public name = "Huy";
-  public age = 17;
+  public age = 18;
   public jobs = ["doctor", "engineer", "teacher", "nurse"];
 
   constructor() {
@@ -19,16 +20,16 @@ export class HomeComponent implements OnInit {
 
   tangTuoi() {
     this.age++;
-    if(this.age === 20){
-      this.name = "David"
-    }
-    this.jobs.push(this.name + this.age);
+    // if (this.age === 20) {
+    //   this.name = "David"
+    // }
+    // this.jobs.push(this.name + this.age);
   }
 
   giamTuoi() {
     this.age--;
-    if(this.age <= 20){
-      this.name = "Huy Đông";
-    }
+    // if (this.age <= 20) {
+    //   this.name = "Huy Đông";
+    // }
   }
 }

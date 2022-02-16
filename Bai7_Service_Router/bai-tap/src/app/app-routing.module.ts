@@ -1,0 +1,25 @@
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
+import {DictionaryDetailComponent} from "./dictionary-detail/dictionary-detail.component";
+import {DictionaryPageComponent} from "./dictionary-page/dictionary-page.component";
+
+let AuthGuard;
+const routes: Routes = [{
+  path: 'dictionary',
+  component: DictionaryPageComponent,
+  children: [
+    {
+      path: ':key',
+      component: DictionaryDetailComponent,
+      canActivate: [AuthGuard]
+    }
+  ]
+}];
+
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule {
+}
