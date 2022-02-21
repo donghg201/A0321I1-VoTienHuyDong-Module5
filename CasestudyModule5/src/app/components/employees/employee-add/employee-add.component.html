@@ -1,0 +1,68 @@
+<h3 class="text-center">Thêm mới nhân viên</h3>
+
+<form class="w-75 mx-auto mt-3" [formGroup]="formAddNewEmployee">
+    <div class="form-group">
+        <label for="fullName">Họ và tên:</label>
+        <input type="text" class="form-control" id="fullName" 
+        formControlName="fullName">
+        <div *ngIf="false" class="text-danger">Vui lòng nhập họ tên
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="position">Vị trí:</label>
+        <input type="text" class="form-control" id="position"
+        formControlName="position">
+        <div *ngIf="false" class="text-danger">Vui lòng nhập vị trí</div>
+    </div>
+    <div class="form-group">
+        <label for="level">Trình độ:</label>
+        <input type="text" class="form-control" id="level"
+        formControlName="level">
+        <div *ngIf="false" class="text-danger">Vui lòng nhập trình độ</div>
+    </div>
+    <div class="form-group">
+        <label for="part">Bộ phận:</label>
+        <input type="text" class="form-control" id="part"
+        formControlName="part">
+        <div *ngIf="false" class="text-danger">Vui lòng nhập bộ phận</div>
+    </div>
+    <div class="form-group">
+        <label for="dob">Ngày sinh:</label>
+        <input type="date" class="form-control" id="dob"
+        formControlName="dob">
+        <div *ngIf="false" class="text-danger">Vui lòng nhập ngày sinh</div>
+    </div>
+    <div class="form-group">
+        <label for="identity">Số CMND:</label>
+        <input type="number" class="form-control" id="identity"
+        formControlName="identity">
+        <div *ngIf="false" class="text-danger">Vui lòng nhập số CMND</div>
+    </div>
+    <div class="form-group">
+        <label for="salary">Lương:</label>
+        <input type="number" class="form-control" id="salary"
+        formControlName="salary">
+        <div *ngIf="false" class="text-danger">Lương</div>
+    </div>
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email"
+        formControlName="email">
+        <div *ngIf="false" class="text-danger">Vui lòng nhập email</div>
+    </div>
+    <div class="form-group">
+        <label for="phoneNumber">Số điện thoại:</label>
+        <input type="number" class="form-control" id="phoneNumber"
+        formControlName="phoneNumber">
+        <div *ngIf="false" class="text-danger">Vui lòng nhập số điện thoại</div>
+    </div>
+    <div class="form-group">
+        <label for="address">Địa chỉ:</label>
+        <input type="text" class="form-control" id="address"
+        formControlName="address">
+        <div *ngIf="false" class="text-danger">Vui lòng nhập địa chỉ</div>
+    </div>
+</form>
+<div class="row d-flex justify-content-center mt-3">
+    <button class="btn btn-success" (click)="addNewEmployee()">Thêm mới</button>
+</div>

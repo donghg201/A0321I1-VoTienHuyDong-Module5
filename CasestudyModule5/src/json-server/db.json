@@ -1,0 +1,86 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "fullName": "Võ Tiến Huy Đông",
+      "position": "Nhân viên",
+      "level": "Đại học",
+      "part": "BE",
+      "dob": "22/10/2001",
+      "identity": "201817054",
+      "salary": "10",
+      "email": "donghg201@gmail.com",
+      "phoneNumber": "0905730724",
+      "address": "31 Me Nhu"
+    },
+    {
+      "id": 2,
+      "fullName": "Võ Tiến Huy",
+      "position": "Nhân viên",
+      "level": "Đại học",
+      "part": "BE",
+      "dob": "22/10/2001",
+      "identity": "201817054",
+      "salary": "10",
+      "email": "donghg201@gmail.com",
+      "phoneNumber": "0905730724",
+      "address": "31 Me Nhu"
+    },
+    {
+      "id": 3,
+      "fullName": "Võ Tiến",
+      "position": "Nhân viên",
+      "level": "Đại học",
+      "part": "BE",
+      "dob": "22/10/2001",
+      "identity": "201817054",
+      "salary": "10",
+      "email": "donghg201@gmail.com",
+      "phoneNumber": "0905730724",
+      "address": "31 Me Nhu"
+    },
+    {
+      "id": 4,
+      "fullName": "Võ Tiến Huy",
+      "position": "Nhân viên",
+      "level": "Đại học",
+      "part": "BE",
+      "dob": "22/10/2001",
+      "identity": "201817054",
+      "salary": "10",
+      "email": "donghg201@gmail.com",
+      "phoneNumber": "0905730724",
+      "address": "31 Me Nhu"
+    },
+    {
+      "fullName": "Trần Văn A",
+      "position": "Nhân viên",
+      "level": "Đại học",
+      "part": "BE",
+      "dob": "22/10/2001",
+      "identity": "201817054",
+      "salary": "10",
+      "email": "donghg201@gmail.com",
+      "phoneNumber": "0905730724",
+      "address": "31 Me Nhu",
+      "id": 5
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "fullName": "Võ Tiến Huy Đông",
+      "email": "donghg201@gmail.com",
+      "phoneNumber": "0905730724"
+    },
+    {
+      "id": 2,
+      "fullName": "Võ Tiến Huy",
+      "email": "donghg201@gmail.com",
+      "phoneNumber": "0905730724"
+    }
+  ],
+  "profiles": {
+    "name": "typecode"
+  }
+}
