@@ -1,28 +1,22 @@
-import { Routes, RouterModule } from '@angular/router';
-import { NgModule } from '@angular/core';
+import {NgModule} from '@angular/core';
+import {Routes, RouterModule} from '@angular/router';
 
-import { EmployeeAddComponent } from './components/employees/employee-add/employee-add.component';
-import { EmployeeListComponent } from './components/employees/employee-list/employee-list.component';
-import { HomeComponent } from './components/home/home.component';
-import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import {HomeComponent} from './components/home/home.component';
+import {PageNotFoundComponent} from './components/page-not-found/page-not-found.component';
+import {EmployeeListComponent} from './components/employees/employee-list/employee-list.component';
+import {EmployeeAddComponent} from './components/employees/employee-add/employee-add.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: '', component: HomeComponent },
-  { path: 'employee-list', component: EmployeeListComponent },
-  { path: 'employee-add', component: EmployeeAddComponent },
-  { path: '**', component: PageNotFoundComponent }
+  {path: 'home', component: HomeComponent},
+  {path: '', component: HomeComponent},
+  {path: 'employee-list', component: EmployeeListComponent},
+  {path: 'employee-add', component: EmployeeAddComponent},
+  {path: '**', component: PageNotFoundComponent}
 ];
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot(routes)],
-  exports: [RouterModule],
-  declarations: [
-    HomeComponent,
-    PageNotFoundComponent,
-    EmployeeListComponent,
-    EmployeeAddComponent
-  ]
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}
