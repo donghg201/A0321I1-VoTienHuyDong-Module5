@@ -1,1 +1,114 @@
-<p>employee-edit works!</p>
+<h3 class="text-center">Chỉnh sửa nhân viên</h3>
+
+<form class="w-75 mx-auto mt-3" [formGroup]="formEditEmployee">
+  <div class="form-group">
+    <label for="fullName">Họ và tên:</label>
+    <input type="text" class="form-control" id="fullName"
+           formControlName="fullName">
+    <div *ngIf="formEditEmployee.get('fullName').getError('required')
+         && formEditEmployee.get('fullName').touched"
+         class="text-danger">Vui lòng nhập họ tên
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="position">Vị trí:</label>
+    <input type="text" class="form-control" id="position"
+           formControlName="position">
+    <div *ngIf="formEditEmployee.get('position').getError('required')
+         && formEditEmployee.get('position').touched"
+         class="text-danger">Vui lòng nhập vị trí
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="level">Trình độ:</label>
+    <input type="text" class="form-control" id="level"
+           formControlName="level">
+    <div *ngIf="formEditEmployee.get('level').getError('required')
+         && formEditEmployee.get('level').touched"
+         class="text-danger">Vui lòng nhập trình độ
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="part">Bộ phận:</label>
+    <input type="text" class="form-control" id="part"
+           formControlName="part">
+    <div *ngIf="formEditEmployee.get('part').getError('required')
+        && formEditEmployee.get('part').touched"
+         class="text-danger">Vui lòng nhập bộ phận
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="dob">Ngày sinh:</label>
+    <mat-form-field appearance="fill">
+      <input [min]="minDate" [max]="maxDate" class="form-control" id="dob" formControlName="dob"
+             matInput [matDatepicker]="myDatepicker">
+      <mat-datepicker-toggle matSuffix [for]="myDatepicker"></mat-datepicker-toggle>
+      <mat-datepicker #myDatepicker></mat-datepicker>
+    </mat-form-field>
+    <p *ngIf="formEditEmployee.get('dob').getError('required')
+        && formEditEmployee.get('dob').touched"
+       class="text-danger">Vui lòng nhập ngày sinh
+    </p>
+  </div>
+  <div class="form-group">
+    <label for="identity">Số CMND:</label>
+    <input type="number" class="form-control" id="identity"
+           formControlName="identity">
+    <div *ngIf="formEditEmployee.get('identity').getError('required')
+        && formEditEmployee.get('identity').touched"
+         class="text-danger">Vui lòng nhập số CMND
+    </div>
+    <div *ngIf="formEditEmployee.get('identity').getError('pattern')
+        && formEditEmployee.get('identity').touched"
+         class="text-danger">CMND không đúng định dạng
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="salary">Lương:</label>
+    <input type="number" class="form-control" id="salary"
+           formControlName="salary">
+    <div *ngIf="formEditEmployee.get('salary').getError('required')
+        && formEditEmployee.get('salary').touched"
+         class="text-danger">Lương
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" class="form-control" id="email"
+           formControlName="email">
+    <div *ngIf="formEditEmployee.get('email').getError('required')
+        && formEditEmployee.get('email').touched"
+         class="text-danger">Vui lòng nhập email
+    </div>
+    <div *ngIf="formEditEmployee.get('email').invalid
+        && formEditEmployee.get('email').touched"
+         class="text-danger">Email sai định dạng
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="phoneNumber">Số điện thoại:</label>
+    <input type="number" class="form-control" id="phoneNumber"
+           formControlName="phoneNumber">
+    <div *ngIf="formEditEmployee.get('phoneNumber').getError('required')
+        && formEditEmployee.get('phoneNumber').touched"
+         class="text-danger">Vui lòng nhập số điện thoại
+    </div>
+    <div *ngIf="formEditEmployee.get('phoneNumber').getError('pattern')
+        && formEditEmployee.get('phoneNumber').touched"
+         class="text-danger">Số điện thoại sai định dạng
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="address">Địa chỉ:</label>
+    <input type="text" class="form-control" id="address"
+           formControlName="address">
+    <div *ngIf="formEditEmployee.get('address').getError('required')
+        && formEditEmployee.get('address').touched"
+         class="text-danger">Vui lòng nhập địa chỉ
+    </div>
+  </div>
+</form>
+<div class="row d-flex justify-content-center mt-3">
+  <button [disabled]="formEditEmployee.invalid" class="btn btn-success" (click)="editEmployee()">Chỉnh sửa</button>
+</div>
+

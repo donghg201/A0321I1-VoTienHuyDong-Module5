@@ -10,6 +10,8 @@ import {Router} from '@angular/router';
 })
 export class EmployeeAddComponent implements OnInit {
   public formAddNewEmployee!: FormGroup;
+  public maxDate = new Date();
+  public minDate = new Date(1990,0,1);
 
   constructor(
     private formBuilder: FormBuilder,
@@ -25,15 +27,17 @@ export class EmployeeAddComponent implements OnInit {
       level: ['', Validators.required],
       part: ['', Validators.required],
       dob: ['', Validators.required],
-      identity: ['', Validators.required],
+      identity: ['', [Validators.required, Validators.pattern('^[0-9]{9}$')]],
       salary: ['', Validators.required],
-      email: ['', Validators.required],
-      phoneNumber: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      phoneNumber: ['', [Validators.required, Validators.pattern('^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\\s\\./0-9]*$')]],
       address: ['', Validators.required]
     });
   }
 
   public addNewEmployee() {
-    console.log(this.formAddNewEmployee);
+    this.employeeService.addNewEmployee(this.formAddNewEmployee.value).subscribe(data => {
+      this.router.navigateByUrl('employee-list');
+    });
   }
 }

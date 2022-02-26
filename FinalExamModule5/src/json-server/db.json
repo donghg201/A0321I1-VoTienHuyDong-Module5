@@ -1,0 +1,76 @@
+{
+  "cars": [
+    {
+      "bienSoXe": "121212",
+      "loaiXe": "Giường nằm",
+      "tenNhaXe": "Mai Linh",
+      "diemDi": "Đà Nẵng",
+      "diemDen": "Quảng Bình",
+      "soDienThoai": 9031212121,
+      "email": "mailinh@gmail.com",
+      "gioDi": "13:20",
+      "gioDen": "8:00",
+      "id": 1
+    },
+    {
+      "bienSoXe": "121212",
+      "loaiXe": "Giường nằm",
+      "tenNhaXe": "Mai Linh",
+      "diemDi": "Đà Nẵng",
+      "diemDen": "Quảng Bình",
+      "soDienThoai": 345345345,
+      "email": "mailinh@gmail.com",
+      "gioDi": "13",
+      "gioDen": "15",
+      "id": 4
+    },
+    {
+      "bienSoXe": "121212",
+      "loaiXe": "Giường nằm",
+      "tenNhaXe": "Mai Linh",
+      "diemDi": "Đà Nẵng",
+      "diemDen": "Quảng Bình",
+      "soDienThoai": 3453453,
+      "email": "mailinh@gmail.com",
+      "gioDi": "13",
+      "gioDen": "15",
+      "id": 5
+    },
+    {
+      "bienSoXe": "121212",
+      "loaiXe": "Giường nằm",
+      "tenNhaXe": "Mai Linh",
+      "diemDi": "Đà Nẵng",
+      "diemDen": "Quảng Bình",
+      "soDienThoai": 345345345,
+      "email": "mailinh@gmail.com",
+      "gioDi": "13",
+      "gioDen": "15",
+      "id": 6
+    },
+    {
+      "bienSoXe": "121212",
+      "loaiXe": "Giường nằm45ytg3e456tyh",
+      "tenNhaXe": "Mai Linh3645y3456",
+      "diemDi": "Đà Nẵng3456y",
+      "diemDen": "Quảng Bình3456y45y",
+      "soDienThoai": 3453453456456,
+      "email": "mailinh@gmail.com",
+      "gioDi": "13",
+      "gioDen": "15",
+      "id": 7
+    },
+    {
+      "bienSoXe": "17878",
+      "loaiXe": "Giường nằm",
+      "tenNhaXe": "Mai Linh",
+      "diemDi": "Đà Nẵng",
+      "diemDen": "Quảng Bình",
+      "soDienThoai": 3453453,
+      "email": "mailinh@gmail.com",
+      "gioDi": "13",
+      "gioDen": "15",
+      "id": 8
+    }
+  ]
+}

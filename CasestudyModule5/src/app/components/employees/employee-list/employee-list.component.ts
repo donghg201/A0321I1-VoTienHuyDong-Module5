@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {EmployeeService} from './../../../services/employee.service';
+import {MatDialog} from '@angular/material/dialog';
+import {EmployeeDeleteDialogComponent} from '../employee-delete-dialog/employee-delete-dialog.component';
 
 @Component({
   selector: 'app-employee-list',
@@ -14,8 +16,9 @@ export class EmployeeListComponent implements OnInit {
   p = 1;
 
   constructor(
-    private employeeService: EmployeeService,
-    private router: Router
+    public employeeService: EmployeeService,
+    public router: Router,
+    public dialog: MatDialog
   ) {
   }
 
@@ -27,4 +30,20 @@ export class EmployeeListComponent implements OnInit {
       console.log('Lay danh sach nhan vien that bai');
     });
   }
+
+  openDialog(id): void {
+    this.employeeService.getEployeeById(id).subscribe(dataOfEmployee => {
+      const dialogRef = this.dialog.open(EmployeeDeleteDialogComponent, {
+        width: '500px',
+        data: {data1: dataOfEmployee},
+        disableClose: true
+      });
+
+      dialogRef.afterClosed().subscribe(result => {
+        console.log('The dialog was closed');
+        this.ngOnInit();
+      });
+    });
+  }
+
 }

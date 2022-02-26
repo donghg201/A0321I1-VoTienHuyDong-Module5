@@ -1,0 +1,94 @@
+<h3 class="text-center">Chỉnh sửa thông tin chuyến xe</h3>
+
+<form class="w-75 mx-auto mt-3" [formGroup]="formXe">
+  <div class="form-group">
+    <label for="bienSoXe">Số xe:</label>
+    <input readonly type="text" class="form-control" id="bienSoXe"
+           formControlName="bienSoXe">
+  </div>
+  <div class="form-group">
+    <label for="loaiXe">Loại xe:</label>
+    <input type="text" class="form-control" id="loaiXe"
+           formControlName="loaiXe">
+    <div *ngIf="formXe.get('loaiXe').getError('required')
+         && formXe.get('loaiXe').touched"
+         class="text-danger">Vui lòng chọn loại xe
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="tenNhaXe">Tên nhà xe:</label>
+    <input type="text" class="form-control" id="tenNhaXe"
+           formControlName="tenNhaXe">
+    <div *ngIf="formXe.get('tenNhaXe').getError('required')
+         && formXe.get('tenNhaXe').touched"
+         class="text-danger">Vui lòng nhập tên nhà xe
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="diemDi">Điểm đi:</label>
+    <input type="text" class="form-control" id="diemDi"
+           formControlName="diemDi">
+    <div *ngIf="formXe.get('diemDi').getError('required')
+        && formXe.get('diemDi').touched"
+         class="text-danger">Vui lòng nhập điểm đi
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="diemDen">Điểm đến:</label>
+    <input type="text" class="form-control" id="diemDen"
+           formControlName="diemDen">
+    <div *ngIf="formXe.get('diemDen').getError('required')
+        && formXe.get('diemDen').touched"
+         class="text-danger">Vui lòng nhập điểm đến
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="soDienThoai">Số điện thoại:</label>
+    <input type="number" class="form-control" id="soDienThoai"
+           formControlName="soDienThoai">
+    <div *ngIf="formXe.get('soDienThoai').getError('required')
+        && formXe.get('soDienThoai').touched"
+         class="text-danger">Vui lòng nhập số điện thoại
+    </div>
+    <div *ngIf="formXe.get('soDienThoai').getError('pattern')
+        && formXe.get('soDienThoai').touched"
+         class="text-danger">Số điện thoại sai định dạng
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" class="form-control" id="email"
+           formControlName="email">
+    <div *ngIf="formXe.get('email').getError('required')
+        && formXe.get('email').touched"
+         class="text-danger">Vui lòng nhập email
+    </div>
+    <div *ngIf="formXe.get('email').invalid
+        && formXe.get('email').touched"
+         class="text-danger">Email sai định dạng
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="gioDi">Giờ đi:</label>
+    <input type="text" class="form-control" id="gioDi"
+           formControlName="gioDi">
+    <div *ngIf="formXe.get('gioDi').getError('required')
+        && formXe.get('gioDi').touched"
+         class="text-danger">Vui lòng nhập giờ đi
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="gioDen">Giờ đến:</label>
+    <input type="text" class="form-control" id="gioDen"
+           formControlName="gioDen">
+    <div *ngIf="formXe.get('gioDen').getError('required')
+        && formXe.get('gioDen').touched"
+         class="text-danger">Vui lòng nhập giờ đến
+    </div>
+  </div>
+</form>
+<div class="row d-flex justify-content-center mt-3">
+  <button [disabled]="formXe.invalid" class="btn btn-success" (click)="editCar()">Chỉnh sửa</button>
+</div>
+

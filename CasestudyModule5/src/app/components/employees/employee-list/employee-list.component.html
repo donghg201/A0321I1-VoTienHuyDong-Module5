@@ -49,15 +49,15 @@
       <td>{{employee.position}}</td>
       <td>{{employee.level}}</td>
       <td>{{employee.part}}</td>
-      <td>{{employee.dob}}</td>
+      <td>{{employee.dob | date: 'yyyy-MM-dd'}}</td>
       <td>{{employee.identity}}</td>
       <td>{{employee.salary}}</td>
       <td>{{employee.email}}</td>
       <td>{{employee.phoneNumber}}</td>
       <td>{{employee.address}}</td>
       <td class="d-flex" style="width:12%">
-        <button class="btn btn-sm btn-warning mr-3">Sửa</button>
-        <button class="btn btn-sm btn-danger">Xóa</button>
+        <button class="btn btn-sm btn-warning mr-3" [routerLink]="['/employee-edit/' + employee.id]">Sửa</button>
+        <button class="btn btn-sm btn-danger" (click)="openDialog(employee.id)">Xóa</button>
       </td>
     </tr>
     </tbody>

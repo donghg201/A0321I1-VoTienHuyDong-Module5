@@ -1,56 +1,30 @@
 {
   "employees": [
     {
-      "id": 1,
       "fullName": "Võ Tiến Huy Đông",
       "position": "Nhân viên",
       "level": "Đại học",
-      "part": "BE",
-      "dob": "22/10/2001",
+      "part": "BEd",
+      "dob": "2022-01-31T17:00:00.000Z",
       "identity": "201817054",
       "salary": "10",
       "email": "donghg201@gmail.com",
       "phoneNumber": "0905730724",
-      "address": "31 Me Nhu"
+      "address": "31 Me Nhu",
+      "id": 1
     },
     {
-      "id": 2,
-      "fullName": "Võ Tiến Huy",
+      "fullName": "Võ Tiến Huy Đôngggg",
       "position": "Nhân viên",
       "level": "Đại học",
       "part": "BE",
-      "dob": "22/10/2001",
+      "dob": "2022-02-21T17:00:00.000Z",
       "identity": "201817054",
       "salary": "10",
       "email": "donghg201@gmail.com",
       "phoneNumber": "0905730724",
-      "address": "31 Me Nhu"
-    },
-    {
-      "id": 3,
-      "fullName": "Võ Tiến",
-      "position": "Nhân viên",
-      "level": "Đại học",
-      "part": "BE",
-      "dob": "22/10/2001",
-      "identity": "201817054",
-      "salary": "10",
-      "email": "donghg201@gmail.com",
-      "phoneNumber": "0905730724",
-      "address": "31 Me Nhu"
-    },
-    {
-      "id": 4,
-      "fullName": "Võ Tiến Huy",
-      "position": "Nhân viên",
-      "level": "Đại học",
-      "part": "BE",
-      "dob": "22/10/2001",
-      "identity": "201817054",
-      "salary": "10",
-      "email": "donghg201@gmail.com",
-      "phoneNumber": "0905730724",
-      "address": "31 Me Nhu"
+      "address": "31 Me Nhu",
+      "id": 4
     },
     {
       "fullName": "Trần Văn A",

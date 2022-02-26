@@ -5,7 +5,8 @@
     <label for="fullName">Họ và tên:</label>
     <input type="text" class="form-control" id="fullName"
            formControlName="fullName">
-    <div *ngIf="formAddNewEmployee.get('fullName').getError('required')"
+    <div *ngIf="formAddNewEmployee.get('fullName').getError('required')
+         && formAddNewEmployee.get('fullName').touched"
          class="text-danger">Vui lòng nhập họ tên
     </div>
   </div>
@@ -13,57 +14,101 @@
     <label for="position">Vị trí:</label>
     <input type="text" class="form-control" id="position"
            formControlName="position">
-    <div *ngIf="false" class="text-danger">Vui lòng nhập vị trí</div>
+    <div *ngIf="formAddNewEmployee.get('position').getError('required')
+         && formAddNewEmployee.get('position').touched"
+         class="text-danger">Vui lòng nhập vị trí
+    </div>
   </div>
   <div class="form-group">
     <label for="level">Trình độ:</label>
     <input type="text" class="form-control" id="level"
            formControlName="level">
-    <div *ngIf="false" class="text-danger">Vui lòng nhập trình độ</div>
+    <div *ngIf="formAddNewEmployee.get('level').getError('required')
+         && formAddNewEmployee.get('level').touched"
+         class="text-danger">Vui lòng nhập trình độ
+    </div>
   </div>
   <div class="form-group">
     <label for="part">Bộ phận:</label>
     <input type="text" class="form-control" id="part"
            formControlName="part">
-    <div *ngIf="false" class="text-danger">Vui lòng nhập bộ phận</div>
+    <div *ngIf="formAddNewEmployee.get('part').getError('required')
+        && formAddNewEmployee.get('part').touched"
+         class="text-danger">Vui lòng nhập bộ phận
+    </div>
   </div>
   <div class="form-group">
     <label for="dob">Ngày sinh:</label>
-    <input type="date" class="form-control" id="dob"
-           formControlName="dob">
-    <div *ngIf="false" class="text-danger">Vui lòng nhập ngày sinh</div>
+    <mat-form-field>
+      <input [min]="minDate" [max]="maxDate" class="form-control" id="dob" formControlName="dob"
+             matInput [matDatepicker]="myDatepicker">
+      <mat-datepicker-toggle matSuffix [for]="myDatepicker"></mat-datepicker-toggle>
+      <mat-datepicker #myDatepicker></mat-datepicker>
+    </mat-form-field>
+    <p *ngIf="formAddNewEmployee.get('dob').getError('required')
+        && formAddNewEmployee.get('dob').touched"
+         class="text-danger">Vui lòng nhập ngày sinh
+    </p>
   </div>
   <div class="form-group">
     <label for="identity">Số CMND:</label>
     <input type="number" class="form-control" id="identity"
            formControlName="identity">
-    <div *ngIf="false" class="text-danger">Vui lòng nhập số CMND</div>
+    <div *ngIf="formAddNewEmployee.get('identity').getError('required')
+        && formAddNewEmployee.get('identity').touched"
+         class="text-danger">Vui lòng nhập số CMND
+    </div>
+    <div *ngIf="formAddNewEmployee.get('identity').getError('pattern')
+        && formAddNewEmployee.get('identity').touched"
+         class="text-danger">CMND không đúng định dạng
+    </div>
   </div>
   <div class="form-group">
     <label for="salary">Lương:</label>
     <input type="number" class="form-control" id="salary"
            formControlName="salary">
-    <div *ngIf="false" class="text-danger">Lương</div>
+    <div *ngIf="formAddNewEmployee.get('salary').getError('required')
+        && formAddNewEmployee.get('salary').touched"
+         class="text-danger">Lương
+    </div>
   </div>
   <div class="form-group">
     <label for="email">Email:</label>
     <input type="email" class="form-control" id="email"
            formControlName="email">
-    <div *ngIf="false" class="text-danger">Vui lòng nhập email</div>
+    <div *ngIf="formAddNewEmployee.get('email').getError('required')
+        && formAddNewEmployee.get('email').touched"
+         class="text-danger">Vui lòng nhập email
+    </div>
+    <div *ngIf="formAddNewEmployee.get('email').invalid
+        && formAddNewEmployee.get('email').touched"
+         class="text-danger">Email sai định dạng
+    </div>
   </div>
   <div class="form-group">
     <label for="phoneNumber">Số điện thoại:</label>
     <input type="number" class="form-control" id="phoneNumber"
            formControlName="phoneNumber">
-    <div *ngIf="false" class="text-danger">Vui lòng nhập số điện thoại</div>
+    <div *ngIf="formAddNewEmployee.get('phoneNumber').getError('required')
+        && formAddNewEmployee.get('phoneNumber').touched"
+         class="text-danger">Vui lòng nhập số điện thoại
+    </div>
+    <div *ngIf="formAddNewEmployee.get('phoneNumber').getError('pattern')
+        && formAddNewEmployee.get('phoneNumber').touched"
+         class="text-danger">Số điện thoại sai định dạng
+    </div>
   </div>
   <div class="form-group">
     <label for="address">Địa chỉ:</label>
     <input type="text" class="form-control" id="address"
            formControlName="address">
-    <div *ngIf="false" class="text-danger">Vui lòng nhập địa chỉ</div>
+    <div *ngIf="formAddNewEmployee.get('address').getError('required')
+        && formAddNewEmployee.get('address').touched"
+         class="text-danger">Vui lòng nhập địa chỉ
+    </div>
   </div>
 </form>
 <div class="row d-flex justify-content-center mt-3">
   <button [disabled]="formAddNewEmployee.invalid" class="btn btn-success" (click)="addNewEmployee()">Thêm mới</button>
 </div>
+
